@@ -1,6 +1,6 @@
 {
   "name": "select-state",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "description": "An extension of the HTMLSelectElement, which populates it with options for each of the United States.",
   "keywords": [
