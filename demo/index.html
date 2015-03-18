@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;select-state&gt;</title>
+
+    <!-- Importing Web Component's Polyfill -->
+<script src="/node_modules/webcomponents.js/webcomponents.min.js"></script>
+
+    <!-- Importing Custom Elements -->
+    <link rel="import" href="/select-state.html">
+</head>
+<body>
+
+<h1>&lt;select is='select-state' default='MI'&gt;&lt;/select&gt;</h1>
+<select is='select-state' default='MI'></select>
+
+
+<h1>&lt;select is='select-state'&gt;&lt;/select&gt;</h1>
+<select is='select-state'></select>
+
+<hr>
+
+<form id='foo'>
+<label for='state'>Choose Wisely</label>
+<select is='select-state' id='state' name='state' default='MT'></select>
+<button>Go!</button>
+</form>
+<output for='foo'>You chose: </output>
+<script>
+var form = document.forms[0],
+    out = document.querySelector('[for="foo"]'),
+    judgement;
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  out.textContent = 'You chose: ' + ( form.elements['state'].value === 'AZ' ? 'wisely': 'poorly');
+
+
+});
+</script>
+</body>
+</html>

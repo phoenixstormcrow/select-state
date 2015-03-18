@@ -1,0 +1,25 @@
+{
+  "name": "select-state",
+  "version": "0.0.0",
+  "private": true,
+  "main": "lib/index.js",
+  "description": "An extension of the HTMLSelectElement, which populates it with options for each of the United States.",
+  "keywords": [
+    "web-components",
+    "states",
+    "abbreviations",
+    "select"
+  ],
+  "scripts": {
+    "lint": "jshint lib/*.js",
+    "build": "browserify lib/index.js -o build/select-state.build.js",
+    "watch": "watchify lib/index.js -o build/select-state.build.js -d -v"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "jshint": "^2.6.3",
+    "tape": "^3.5.0",
+    "watchify": "^2.4.0",
+    "webcomponents.js": "^0.5.5-1"
+  }
+}
